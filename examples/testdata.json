@@ -1,0 +1,21 @@
+{
+  "task": {
+    "title": "Gør køkkenbordet klar",
+    "description": "Et lille skridt er nok.",
+    "priority": "normal",
+    "deadline": null,
+    "category": "Hjemme",
+    "minutes": 10,
+    "energy": 5,
+    "done": false,
+    "archived": false,
+    "steps": ["Ryd en lille plads", "Tør bordet af"]
+  },
+  "routine": {
+    "title": "Rolig morgen",
+    "time_of_day": "morning",
+    "steps": ["Drik et glas vand", "Spis morgenmad", "Tag tøj på"],
+    "minutes": 20,
+    "energy": 10
+  }
+}

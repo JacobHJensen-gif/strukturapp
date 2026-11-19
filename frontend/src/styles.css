@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #213b42; background: #edf5f3; font-synthesis: none; }
+:root.dark { color-scheme: dark; color: #f0f7f5; background: #16272b; }
+:root.large-text { font-size: 120%; }
+:root.high-contrast { color: #111; background: white; }
+:root.high-contrast.dark { color: white; background: #000; }
+body { margin: 0; min-width: 320px; }
+h1 { font-size: clamp(1.75rem, 5vw, 2.4rem); line-height: 1.15; font-weight: 700; }
+h2 { font-size: 1.3rem; line-height: 1.3; font-weight: 650; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; min-height: 48px; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+:focus-visible { outline: 3px solid #326c91; outline-offset: 3px; }
+.dark :focus-visible { outline-color: #b6e4ff; }
+.app-shell { max-width: 960px; min-height: 100dvh; margin: auto; padding-bottom: 110px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.2rem; }
+.brand { font-size: 1.1rem; white-space: nowrap; }
+.overwhelmed { border: 1px solid #6c8c8d; border-radius: 999px; padding: .5rem 1rem; background: transparent; }
+.content { max-width: 650px; margin: auto; padding: 1rem 1.2rem 2rem; }
+.login-shell { max-width: 530px; margin: 8vh auto; padding: 1rem; }
+.card { background: white; border: 1px solid #d5e5e2; border-radius: 1.3rem; padding: 1.4rem; box-shadow: 0 4px 20px #163b4010; }
+.dark .card { background: #20383c; border-color: #456065; }
+.high-contrast .card { border: 2px solid currentColor; }
+.eyebrow { color: #486970; font-weight: 700; font-size: .85rem; letter-spacing: .04em; margin-bottom: .4rem; }
+.dark .eyebrow { color: #b9d8d5; }
+.muted { color: #496269; }
+.dark .muted { color: #c1d9d6; }
+.primary, .secondary { border-radius: .75rem; padding: .7rem 1.1rem; font-weight: 650; }
+.primary { background: #315f68; color: white; border: 1px solid #315f68; }
+.primary:hover:not(:disabled) { background: #254b53; }
+.secondary { background: transparent; color: inherit; border: 1px solid #6d8b8b; }
+.button-row { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; }
+.form { display: grid; gap: 1rem; margin-top: 1.4rem; }
+label { display: grid; gap: .35rem; font-weight: 600; }
+input:not([type=checkbox]), select, textarea { width: 100%; color: inherit; background: transparent; border: 1px solid #789393; border-radius: .6rem; padding: .7rem; min-height: 48px; }
+textarea { min-height: 90px; resize: vertical; }
+.check { display: flex; align-items: center; gap: .7rem; min-height: 48px; }
+.check input { width: 1.3rem; height: 1.3rem; }
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; display: grid; grid-template-columns: repeat(5, 1fr); background: #fff; border-top: 1px solid #d5e5e2; padding: .35rem max(.3rem, env(safe-area-inset-left)) max(.35rem, env(safe-area-inset-bottom)); }
+.dark .bottom-nav { background: #20383c; border-color: #456065; }
+.nav-link { min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .2rem; font-size: .75rem; text-decoration: none; color: inherit; border-radius: .6rem; }
+.nav-link.active { background: #dcebea; color: #213b42; font-weight: 700; }
+.dark .nav-link.active { background: #47656a; color: white; }
+.notice, .sync-status { max-width: 650px; margin: .5rem auto; padding: .8rem 1.2rem; }
+.notice { border: 2px solid #7d6c3b; border-radius: .7rem; }
+.sync-status { font-size: .85rem; }
+.timeline { display: grid; gap: .7rem; }
+.event { display: grid; grid-template-columns: 5rem 1fr; gap: .7rem; padding: 1rem; border-left: 5px solid #789bad; border-radius: .5rem; background: white; }
+.event-green { border-color: #638e79; } .event-sand { border-color: #a78d61; }
+.dark .event { background: #20383c; }
+.text-button { padding: .4rem; text-decoration: underline; }
+.timer { font-size: 3rem; font-variant-numeric: tabular-nums; font-weight: 700; }
+.skip { position: absolute; left: -9999px; top: 0; }
+.skip:focus { left: 1rem; z-index: 100; background: white; color: black; padding: 1rem; }
